@@ -1,0 +1,304 @@
+=============== www.cnn.com ===============
+=== DNS query ===
+Header:
+  ID      0xf6aa
+  Flags   0x0100 (QR=0, OPCODE=0, RD=1)
+  QDCOUNT 0x0001
+  ANCOUNT 0x0000
+  NSCOUNT 0x0000
+  ARCOUNT 0x0000
+  Hex     f6 aa 01 00 00 01 00 00 00 00 00 00
+Question:
+  QNAME   www.cnn.com
+          03 77 77 77 03 63 6e 6e 03 63 6f 6d 00
+  QTYPE   0x0001 (A)
+  QCLASS  0x0001 (IN)
+  Hex     03 77 77 77 03 63 6e 6e 03 63 6f 6d 00 00 01 00 01
+Full query (29 bytes):
+  f6 aa 01 00 00 01 00 00 00 00 00 00 03 77 77 77 03 63 6e 6e 03 63 6f 6d 00 00 01 00 01
+Destination: 8.8.8.8:53 (UDP over IPv4)
+Socket created
+Attempt 1/3: sent 29 bytes from local port 56483
+Attempt 1/3: received valid reply
+=== DNS response (129 bytes) ===
+Raw hex:
+  f6 aa 81 80 00 01 00 05 00 00 00 00 03 77 77 77 03 63 6e 6e 03 63 6f 6d 00 00 01 00 01 c0 0c 00 05 00 01 00 00 00 a6 00 18 07 63 6e 6e 2d 74 6c 73 03 6d 61 70 06 66 61 73 74 6c 79 03 6e 65 74 00 c0 29 00 01 00 01 00 00 00 08 00 04 97 65 83 05 c0 29 00 01 00 01 00 00 00 08 00 04 97 65 43 05 c0 29 00 01 00 01 00 00 00 08 00 04 97 65 03 05 c0 29 00 01 00 01 00 00 00 08 00 04 97 65 c3 05
+Header:
+  ID      0xf6aa
+  Flags   0x8180
+    QR=1 OPCODE=0 AA=0 TC=0 RD=1 RA=1 Z=0 RCODE=0 (NOERROR)
+  QDCOUNT 0x0001 (1)
+  ANCOUNT 0x0005 (5)
+  NSCOUNT 0x0000 (0)
+  ARCOUNT 0x0000 (0)
+Question:
+  QNAME=www.cnn.com QTYPE=0x0001 (A) QCLASS=0x0001 (IN)
+Answer section (5 records):
+  [Answer 1] NAME=www.cnn.com
+    TYPE=0x0005 (CNAME) CLASS=0x0001 (IN) TTL=0x000000a6 (166)
+    RDLENGTH=0x0018 (24)
+    RDATA=cnn-tls.map.fastly.net
+  [Answer 2] NAME=cnn-tls.map.fastly.net
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x00000008 (8)
+    RDLENGTH=0x0004 (4)
+    RDATA=151.101.131.5
+  [Answer 3] NAME=cnn-tls.map.fastly.net
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x00000008 (8)
+    RDLENGTH=0x0004 (4)
+    RDATA=151.101.67.5
+  [Answer 4] NAME=cnn-tls.map.fastly.net
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x00000008 (8)
+    RDLENGTH=0x0004 (4)
+    RDATA=151.101.3.5
+  [Answer 5] NAME=cnn-tls.map.fastly.net
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x00000008 (8)
+    RDLENGTH=0x0004 (4)
+    RDATA=151.101.195.5
+Authority section (0 records):
+Additional section (0 records):
+=== Outcome ===
+SUCCESS: 4 IPv4 address(es): 151.101.131.5, 151.101.67.5, 151.101.3.5, 151.101.195.5
+Socket closed
+exit status: 0
+
+=============== brooklyn.cuny.edu ===============
+=== DNS query ===
+Header:
+  ID      0x751f
+  Flags   0x0100 (QR=0, OPCODE=0, RD=1)
+  QDCOUNT 0x0001
+  ANCOUNT 0x0000
+  NSCOUNT 0x0000
+  ARCOUNT 0x0000
+  Hex     75 1f 01 00 00 01 00 00 00 00 00 00
+Question:
+  QNAME   brooklyn.cuny.edu
+          08 62 72 6f 6f 6b 6c 79 6e 04 63 75 6e 79 03 65 64 75 00
+  QTYPE   0x0001 (A)
+  QCLASS  0x0001 (IN)
+  Hex     08 62 72 6f 6f 6b 6c 79 6e 04 63 75 6e 79 03 65 64 75 00 00 01 00 01
+Full query (35 bytes):
+  75 1f 01 00 00 01 00 00 00 00 00 00 08 62 72 6f 6f 6b 6c 79 6e 04 63 75 6e 79 03 65 64 75 00 00 01 00 01
+Destination: 8.8.8.8:53 (UDP over IPv4)
+Socket created
+Attempt 1/3: sent 35 bytes from local port 60384
+Attempt 1/3: received valid reply
+=== DNS response (51 bytes) ===
+Raw hex:
+  75 1f 81 80 00 01 00 01 00 00 00 00 08 62 72 6f 6f 6b 6c 79 6e 04 63 75 6e 79 03 65 64 75 00 00 01 00 01 c0 0c 00 01 00 01 00 00 1a ae 00 04 92 f5 c9 32
+Header:
+  ID      0x751f
+  Flags   0x8180
+    QR=1 OPCODE=0 AA=0 TC=0 RD=1 RA=1 Z=0 RCODE=0 (NOERROR)
+  QDCOUNT 0x0001 (1)
+  ANCOUNT 0x0001 (1)
+  NSCOUNT 0x0000 (0)
+  ARCOUNT 0x0000 (0)
+Question:
+  QNAME=brooklyn.cuny.edu QTYPE=0x0001 (A) QCLASS=0x0001 (IN)
+Answer section (1 records):
+  [Answer 1] NAME=brooklyn.cuny.edu
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x00001aae (6830)
+    RDLENGTH=0x0004 (4)
+    RDATA=146.245.201.50
+Authority section (0 records):
+Additional section (0 records):
+=== Outcome ===
+SUCCESS: 1 IPv4 address(es): 146.245.201.50
+Socket closed
+exit status: 0
+
+=============== youtube.com ===============
+=== DNS query ===
+Header:
+  ID      0x56af
+  Flags   0x0100 (QR=0, OPCODE=0, RD=1)
+  QDCOUNT 0x0001
+  ANCOUNT 0x0000
+  NSCOUNT 0x0000
+  ARCOUNT 0x0000
+  Hex     56 af 01 00 00 01 00 00 00 00 00 00
+Question:
+  QNAME   youtube.com
+          07 79 6f 75 74 75 62 65 03 63 6f 6d 00
+  QTYPE   0x0001 (A)
+  QCLASS  0x0001 (IN)
+  Hex     07 79 6f 75 74 75 62 65 03 63 6f 6d 00 00 01 00 01
+Full query (29 bytes):
+  56 af 01 00 00 01 00 00 00 00 00 00 07 79 6f 75 74 75 62 65 03 63 6f 6d 00 00 01 00 01
+Destination: 8.8.8.8:53 (UDP over IPv4)
+Socket created
+Attempt 1/3: sent 29 bytes from local port 55274
+Attempt 1/3: received valid reply
+=== DNS response (93 bytes) ===
+Raw hex:
+  56 af 81 80 00 01 00 04 00 00 00 00 07 79 6f 75 74 75 62 65 03 63 6f 6d 00 00 01 00 01 c0 0c 00 01 00 01 00 00 01 2c 00 04 8e fb a7 88 c0 0c 00 01 00 01 00 00 01 2c 00 04 8e fb a7 be c0 0c 00 01 00 01 00 00 01 2c 00 04 8e fb a7 5d c0 0c 00 01 00 01 00 00 01 2c 00 04 8e fb a7 5b
+Header:
+  ID      0x56af
+  Flags   0x8180
+    QR=1 OPCODE=0 AA=0 TC=0 RD=1 RA=1 Z=0 RCODE=0 (NOERROR)
+  QDCOUNT 0x0001 (1)
+  ANCOUNT 0x0004 (4)
+  NSCOUNT 0x0000 (0)
+  ARCOUNT 0x0000 (0)
+Question:
+  QNAME=youtube.com QTYPE=0x0001 (A) QCLASS=0x0001 (IN)
+Answer section (4 records):
+  [Answer 1] NAME=youtube.com
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x0000012c (300)
+    RDLENGTH=0x0004 (4)
+    RDATA=142.251.167.136
+  [Answer 2] NAME=youtube.com
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x0000012c (300)
+    RDLENGTH=0x0004 (4)
+    RDATA=142.251.167.190
+  [Answer 3] NAME=youtube.com
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x0000012c (300)
+    RDLENGTH=0x0004 (4)
+    RDATA=142.251.167.93
+  [Answer 4] NAME=youtube.com
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x0000012c (300)
+    RDLENGTH=0x0004 (4)
+    RDATA=142.251.167.91
+Authority section (0 records):
+Additional section (0 records):
+=== Outcome ===
+SUCCESS: 4 IPv4 address(es): 142.251.167.136, 142.251.167.190, 142.251.167.93, 142.251.167.91
+Socket closed
+exit status: 0
+
+=============== www.example.com ===============
+=== DNS query ===
+Header:
+  ID      0x4c69
+  Flags   0x0100 (QR=0, OPCODE=0, RD=1)
+  QDCOUNT 0x0001
+  ANCOUNT 0x0000
+  NSCOUNT 0x0000
+  ARCOUNT 0x0000
+  Hex     4c 69 01 00 00 01 00 00 00 00 00 00
+Question:
+  QNAME   www.example.com
+          03 77 77 77 07 65 78 61 6d 70 6c 65 03 63 6f 6d 00
+  QTYPE   0x0001 (A)
+  QCLASS  0x0001 (IN)
+  Hex     03 77 77 77 07 65 78 61 6d 70 6c 65 03 63 6f 6d 00 00 01 00 01
+Full query (33 bytes):
+  4c 69 01 00 00 01 00 00 00 00 00 00 03 77 77 77 07 65 78 61 6d 70 6c 65 03 63 6f 6d 00 00 01 00 01
+Destination: 8.8.8.8:53 (UDP over IPv4)
+Socket created
+Attempt 1/3: sent 33 bytes from local port 33148
+Attempt 1/3: received valid reply
+=== DNS response (65 bytes) ===
+Raw hex:
+  4c 69 81 80 00 01 00 02 00 00 00 00 03 77 77 77 07 65 78 61 6d 70 6c 65 03 63 6f 6d 00 00 01 00 01 c0 0c 00 01 00 01 00 00 00 31 00 04 68 14 17 9a c0 0c 00 01 00 01 00 00 00 31 00 04 ac 42 93 f3
+Header:
+  ID      0x4c69
+  Flags   0x8180
+    QR=1 OPCODE=0 AA=0 TC=0 RD=1 RA=1 Z=0 RCODE=0 (NOERROR)
+  QDCOUNT 0x0001 (1)
+  ANCOUNT 0x0002 (2)
+  NSCOUNT 0x0000 (0)
+  ARCOUNT 0x0000 (0)
+Question:
+  QNAME=www.example.com QTYPE=0x0001 (A) QCLASS=0x0001 (IN)
+Answer section (2 records):
+  [Answer 1] NAME=www.example.com
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x00000031 (49)
+    RDLENGTH=0x0004 (4)
+    RDATA=104.20.23.154
+  [Answer 2] NAME=www.example.com
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x00000031 (49)
+    RDLENGTH=0x0004 (4)
+    RDATA=172.66.147.243
+Authority section (0 records):
+Additional section (0 records):
+=== Outcome ===
+SUCCESS: 2 IPv4 address(es): 104.20.23.154, 172.66.147.243
+Socket closed
+exit status: 0
+
+=============== www.wikipedia.org ===============
+=== DNS query ===
+Header:
+  ID      0x3c84
+  Flags   0x0100 (QR=0, OPCODE=0, RD=1)
+  QDCOUNT 0x0001
+  ANCOUNT 0x0000
+  NSCOUNT 0x0000
+  ARCOUNT 0x0000
+  Hex     3c 84 01 00 00 01 00 00 00 00 00 00
+Question:
+  QNAME   www.wikipedia.org
+          03 77 77 77 09 77 69 6b 69 70 65 64 69 61 03 6f 72 67 00
+  QTYPE   0x0001 (A)
+  QCLASS  0x0001 (IN)
+  Hex     03 77 77 77 09 77 69 6b 69 70 65 64 69 61 03 6f 72 67 00 00 01 00 01
+Full query (35 bytes):
+  3c 84 01 00 00 01 00 00 00 00 00 00 03 77 77 77 09 77 69 6b 69 70 65 64 69 61 03 6f 72 67 00 00 01 00 01
+Destination: 8.8.8.8:53 (UDP over IPv4)
+Socket created
+Attempt 1/3: sent 35 bytes from local port 41728
+Attempt 1/3: received valid reply
+=== DNS response (80 bytes) ===
+Raw hex:
+  3c 84 81 80 00 01 00 02 00 00 00 00 03 77 77 77 09 77 69 6b 69 70 65 64 69 61 03 6f 72 67 00 00 01 00 01 c0 0c 00 05 00 01 00 00 27 2e 00 11 04 64 79 6e 61 09 77 69 6b 69 6d 65 64 69 61 c0 1a c0 2f 00 01 00 01 00 00 00 b4 00 04 d0 50 9a e0
+Header:
+  ID      0x3c84
+  Flags   0x8180
+    QR=1 OPCODE=0 AA=0 TC=0 RD=1 RA=1 Z=0 RCODE=0 (NOERROR)
+  QDCOUNT 0x0001 (1)
+  ANCOUNT 0x0002 (2)
+  NSCOUNT 0x0000 (0)
+  ARCOUNT 0x0000 (0)
+Question:
+  QNAME=www.wikipedia.org QTYPE=0x0001 (A) QCLASS=0x0001 (IN)
+Answer section (2 records):
+  [Answer 1] NAME=www.wikipedia.org
+    TYPE=0x0005 (CNAME) CLASS=0x0001 (IN) TTL=0x0000272e (10030)
+    RDLENGTH=0x0011 (17)
+    RDATA=dyna.wikimedia.org
+  [Answer 2] NAME=dyna.wikimedia.org
+    TYPE=0x0001 (A) CLASS=0x0001 (IN) TTL=0x000000b4 (180)
+    RDLENGTH=0x0004 (4)
+    RDATA=208.80.154.224
+Authority section (0 records):
+Additional section (0 records):
+=== Outcome ===
+SUCCESS: 1 IPv4 address(es): 208.80.154.224
+Socket closed
+exit status: 0
+
+=============== Example 2 (timeout, resolver 192.0.2.1) ===============
+=== DNS query ===
+Header:
+  ID      0xfa43
+  Flags   0x0100 (QR=0, OPCODE=0, RD=1)
+  QDCOUNT 0x0001
+  ANCOUNT 0x0000
+  NSCOUNT 0x0000
+  ARCOUNT 0x0000
+  Hex     fa 43 01 00 00 01 00 00 00 00 00 00
+Question:
+  QNAME   www.cnn.com
+          03 77 77 77 03 63 6e 6e 03 63 6f 6d 00
+  QTYPE   0x0001 (A)
+  QCLASS  0x0001 (IN)
+  Hex     03 77 77 77 03 63 6e 6e 03 63 6f 6d 00 00 01 00 01
+Full query (29 bytes):
+  fa 43 01 00 00 01 00 00 00 00 00 00 03 77 77 77 03 63 6e 6e 03 63 6f 6d 00 00 01 00 01
+Destination: 192.0.2.1:53 (UDP over IPv4)
+Socket created
+Attempt 1/3: sent 29 bytes from local port 40385
+Attempt 1/3: timed out after 5 s
+Attempt 2/3: sent 29 bytes from local port 40385
+Attempt 2/3: timed out after 5 s
+Attempt 3/3: sent 29 bytes from local port 40385
+Attempt 3/3: timed out after 5 s
+=== Outcome ===
+FAILURE: no valid reply after 3 transmissions
+Socket closed
+
+real	0m15.052s
+user	0m0.025s
+sys	0m0.012s
