@@ -302,3 +302,4 @@ Socket closed
 real	0m15.052s
 user	0m0.025s
 sys	0m0.012s
+exit status: 1 (nonzero, failure after 3 transmissions)
